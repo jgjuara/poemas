@@ -1,0 +1,6 @@
+[submodule "mono-site/themes/xmin"]
+	path = mono-site/themes/xmin
+	url = https://github.com/yihui/hugo-xmin.git
+[submodule "mono-site/themes/hugo-xmin"]
+	path = mono-site/themes/hugo-xmin
+	url = https://github.com/yihui/hugo-xmin.git

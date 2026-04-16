@@ -1,0 +1,42 @@
+baseurl: "https://jgjuara.github.io/poemas/"
+languageCode: "es"
+title: "Juan Gabriel Juara"
+theme: "hugo-xmin"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.template\\.md$"]
+footnotereturnlinkcontents: "↩"
+enableEmoji: True
+buildFuture: true
+
+permalinks:
+  apuntes: "/apuntes/:slug/:year-:month-:day/"
+
+menu:
+  main:
+    - name: Índice
+      url: ""
+      weight: 1
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "&copy; Juan Gabriel Juara {Year} | [Github](https://github.com/jgjuara)"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)

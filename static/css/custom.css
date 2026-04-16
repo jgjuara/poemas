@@ -1,0 +1,183 @@
+/* Tokens lectura prolongada: contraste texto/fondo verificado ~12:1 (#1a1816 sobre #f8f6f1) */
+:root {
+    --reading-bg: #f8f6f1;
+    --reading-fg: #1a1816;
+    --reading-max-ch: 65ch;
+    --reading-line-height: 1.58;
+    --reading-nav-max: min(92vw, 42rem);
+    --ambient-hue: 38;
+    --ambient-sat: 12%;
+    --ambient-light: 78%;
+}
+
+html {
+    min-height: 90vh;
+    font-size: clamp(17px, 1.1rem, 19px);
+    background-color: var(--reading-bg);
+}
+
+body {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em clamp(0.75rem, 3vw, 1.5rem);
+    box-sizing: border-box;
+    background-color: var(--reading-bg) !important;
+    color: var(--reading-fg);
+    line-height: var(--reading-line-height);
+    position: relative;
+    z-index: 0;
+}
+
+body > nav {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    max-width: var(--reading-nav-max);
+    margin-inline: auto;
+    width: 100%;
+}
+
+body > footer {
+    flex-shrink: 0;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+    max-width: var(--reading-max-ch);
+    margin-inline: auto;
+    width: 100%;
+}
+
+.article-meta {
+    max-width: var(--reading-max-ch);
+    margin-inline: auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.article-meta, .menu a {
+    background-color: transparent !important;
+}
+
+main {
+    max-width: var(--reading-max-ch);
+    margin-inline: auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    line-height: var(--reading-line-height);
+    hyphens: auto;
+}
+
+.menu li {
+    margin-right: 1% !important;
+}
+
+.menu a {
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    text-decoration: none;
+    border-bottom: .2rem solid #008cff;
+}
+
+.menu a:link,
+.menu a:visited,
+.menu a:active {
+    color: inherit !important;
+    border-bottom: .2rem solid #008cff;
+}
+
+.menu a:hover {
+    border-bottom-color: #8e0000;
+}
+
+blockquote {
+    background: rgba(0, 0, 0, 0.03);
+    border-left-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Capa periférica: detrás del contenido, sin capturar eventos */
+.ambient-margin {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    color: hsl(var(--ambient-hue) var(--ambient-sat) var(--ambient-light));
+}
+
+.ambient-margin__blob {
+    position: absolute;
+    opacity: 0;
+    will-change: opacity;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+.ambient-margin__blob svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ambient-margin__blob--a {
+    width: min(26vw, 220px);
+    left: max(0px, calc(50% - 50ch - 2rem));
+    top: 12%;
+}
+
+.ambient-margin__blob--b {
+    width: min(22vw, 180px);
+    left: max(0px, calc(50% - 48ch - 1rem));
+    bottom: 18%;
+}
+
+.ambient-margin__blob--c {
+    width: min(24vw, 200px);
+    right: max(0px, calc(50% - 50ch - 2rem));
+    top: 38%;
+}
+
+.ambient-margin__blob--d {
+    width: min(20vw, 170px);
+    right: max(0px, calc(50% - 46ch - 0.5rem));
+    bottom: 12%;
+}
+
+@media (max-width: 720px) {
+    .ambient-margin {
+        visibility: hidden;
+        opacity: 0 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ambient-margin {
+        display: none;
+    }
+}
+
+main.poesia-content {
+    white-space: pre-line;
+    hyphens: manual;
+}
+
+.poesia-content p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+.poesia-content p + p {
+    margin-top: 0.85em;
+}
+
+/* Dedicatoria u otro m-izq al inicio del poema (no los spans in-line dentro de un verso). */
+main.poesia-content > span:first-of-type {
+    display: block;
+    margin-bottom: 1em;
+}

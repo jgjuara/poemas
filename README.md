@@ -1,3 +1,3 @@
-# Blog
+# Poemas
 
-Blog personal.
+https://jgjuara.github.io/poemas/

@@ -15,11 +15,14 @@ draft: false
 todo lo que toca el mar
 todo lo que lame
 con su lengua
-de sol y iodo y tierra
+de sol
+iodo 
+y tierra
 
 todo lo que acaricia
 como saboreando
-un helado sobre la arena
+un helado
+sobre la arena
 
 todo lo que devora y engulle
 todo lo que abriga
@@ -28,7 +31,7 @@ de gran ballena
 
 todo lo que reverbera
 con su murmullo
-todo lo que devuelve
+lo que devuelve
 como un eco desgarrado
 
 todo lo que no puede

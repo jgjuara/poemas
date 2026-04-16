@@ -36,7 +36,7 @@ soltarse de sus amarras
 y anda a la deriva
 en la tierra
 con el mar
-¡adentro!
+adentro
 
 
 

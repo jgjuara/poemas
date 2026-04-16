@@ -7,14 +7,12 @@
   {{ if .IsHome }}
     {{ range sort (where .Site.RegularPages "File.ContentBaseName" "!=" "Bio") "Date" "desc" }}
   <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
     <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
   </li>
     {{ end }}
   {{ else }}
     {{ range sort .Pages "Date" "desc" }}
   <li>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
     <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
   </li>
     {{ end }}

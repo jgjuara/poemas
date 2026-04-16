@@ -14,7 +14,7 @@ nos
 
 caen nuestras migajas
 en el cajon de las cosas 
-{{< m-izq 20 >}}desordenadas{{</m-izq>}}
+{{< m-izq 10 >}}desordenadas{{</m-izq>}}
 
 allá vamos
 paseando por la ciudad

@@ -30,6 +30,6 @@ vos que del sol fuiste lazarillo
 bajo solar refugio terminás tu carrera.
 
 
-![Perro semihundido, Francisco de Goya y Lucientes](/img/goya-el-perro.png)
+{{< static-img "/img/goya-el-perro.png" "Perro semihundido, Francisco de Goya y Lucientes" >}}
 
 Perro semihundido, Francisco de Goya y Lucientes, Museo Nacional del Prado

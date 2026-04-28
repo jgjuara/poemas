@@ -1,4 +1,5 @@
-baseurl: "https://jgjuara.github.io/poemas/"
+baseurl: "https://poemas.juanjuara.ar/"
+relativeURLs: true
 languageCode: "es"
 title: "Juan Gabriel Juara"
 theme: "hugo-xmin"

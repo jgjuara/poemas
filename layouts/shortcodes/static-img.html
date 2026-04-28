@@ -1,4 +1,2 @@
-{{- $path := strings.TrimPrefix "/" (.Get 0) -}}
-{{- $base := strings.TrimSuffix "/" site.BaseURL -}}
 {{- $alt := .Get 1 | default "" -}}
-<img src="{{ $base }}/{{ $path }}" alt="{{ $alt }}" loading="lazy" decoding="async" />
+<img src="{{ (.Get 0) | relURL }}" alt="{{ $alt }}" loading="lazy" decoding="async" />
